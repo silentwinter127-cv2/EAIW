@@ -8,7 +8,7 @@ from __future__ import annotations
 import os
 from pathlib import Path
 
-ROOT = Path(r"E:\EAIW")
+ROOT = Path(__file__).resolve().parent.parent
 CACHE = ROOT / "models" / "hf_cache"
 TEMP = ROOT / "temp"
 OUTPUTS = ROOT / "outputs" / "transformer_dream"

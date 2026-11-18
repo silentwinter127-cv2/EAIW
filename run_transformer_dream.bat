@@ -1,9 +1,9 @@
 @echo off
 setlocal
-cd /d E:\EAIW
-set HF_HOME=E:\EAIW\models\hf_cache
-set TEMP=E:\EAIW\temp
-set TMP=E:\EAIW\temp
+cd /d "%~dp0"
+set HF_HOME=%~dp0models\hf_cache
+set TEMP=%~dp0temp
+set TMP=%~dp0temp
 set TRANSFORMERS_OFFLINE=1
 set HF_HUB_OFFLINE=1
 netstat -ano | findstr /R /C:":7866 .*LISTENING" >nul

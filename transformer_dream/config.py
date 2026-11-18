@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-ROOT = Path(r"E:\EAIW")
+ROOT = Path(__file__).resolve().parent.parent
 QWEN_DIR = ROOT / "models" / "qwen3-vl-2b-instruct"
 OUTPUTS = ROOT / "outputs" / "transformer_dream"
 MODEL_ID = "Qwen/Qwen3-VL-2B-Instruct"
