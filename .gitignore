@@ -1,0 +1,65 @@
+# ---- model weights (downloaded, never commit) ----
+models/weights/
+models/qwen3-vl-2b-instruct/
+models/clip-vit-large-patch14/
+models/hf_cache/
+models/torch_cache/
+models/**/*.safetensors
+models/**/*.ckpt
+models/**/*.pth
+models/**/*.onnx
+models/**/*.npz
+models/**/*.bin
+models/**/*.msgpack
+
+# ---- generated / large artifacts ----
+archive/
+outputs/
+temp/
+*.sqlite
+*.sqlite3
+*.db
+*.db-wal
+*.db-shm
+*.log
+*.out
+*.err
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# ---- Node / editor ----
+node_modules/
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# ---- secrets / keys ----
+.ssh/
+id_ed25519*
+id_rsa*
+*.pem
+*.key
+*.ppk
+.env
+.env.*
+
+# ---- local-only screenshots / scratch ----
+/*.png
+/*.jpg
+/*.jpeg
+/*.webp

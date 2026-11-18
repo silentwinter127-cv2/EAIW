@@ -1,0 +1,46 @@
+{
+  "presets": [
+    {
+      "preset_id": "mobile_ai_eraser_phantom_limb",
+      "name": "手机相册 AI 消除畸形肢体/语义错乱 (Mobile AI Eraser Semantic & Spatial Failure)",
+      "failure_category": "Semantic Failure",
+      "parameters": {
+        "mask_accuracy": 0.72,
+        "context_awareness": 0.45,
+        "semantic_consistency": 0.35,
+        "spatial_consistency": 0.4,
+        "boundary_blending": 0.55,
+        "resolution_quality": 0.7,
+        "sampling_variance": 0.35
+      }
+    },
+    {
+      "preset_id": "patchmatch_repetitive_tiles",
+      "name": "早期 PatchMatch 纹理死循环重复 (Repetitive Texture Cloning)",
+      "failure_category": "Texture Failure",
+      "parameters": {
+        "mask_accuracy": 0.9,
+        "context_awareness": 0.3,
+        "semantic_consistency": 0.6,
+        "spatial_consistency": 0.75,
+        "boundary_blending": 0.65,
+        "resolution_quality": 0.85,
+        "sampling_variance": 0.05
+      }
+    },
+    {
+      "preset_id": "hard_seam_boundary_step",
+      "name": "早期 CNN 修复接缝与色彩断层 (Boundary Seam & Chrominance Step)",
+      "failure_category": "Boundary Failure",
+      "parameters": {
+        "mask_accuracy": 0.85,
+        "context_awareness": 0.8,
+        "semantic_consistency": 0.85,
+        "spatial_consistency": 0.85,
+        "boundary_blending": 0.2,
+        "resolution_quality": 0.5,
+        "sampling_variance": 0.15
+      }
+    }
+  ]
+}

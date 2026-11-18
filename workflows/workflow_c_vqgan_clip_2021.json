@@ -1,0 +1,33 @@
+{
+  "workflow_id": "workflow_c_vqgan_clip_2021",
+  "name": "核心工作流 C：2021–2022 年早期 AI 文本生图 (VQGAN+CLIP -> ESRGAN 后处理)",
+  "initial_input": null,
+  "nodes": [
+    {
+      "node_id": "vqgan_clip_synthesis",
+      "model_id": "vqgan_clip_2021",
+      "execution_mode": "Historical",
+      "operation": "txt2img",
+      "parameters": {
+        "prompt": "A surreal cybernetic cathedral painted by Zdzislaw Beksinski, trending on ArtStation",
+        "clip_model": "ViT-B/32",
+        "vqgan_codebook": "imagenet_f16_16384",
+        "learning_rate": 0.12,
+        "cutouts": 32,
+        "iterations": 6,
+        "seed": 42
+      }
+    },
+    {
+      "node_id": "esrgan_upscale_audit",
+      "model_id": "esrgan_gfpgan_post_2021",
+      "execution_mode": "Historical",
+      "operation": "postprocess",
+      "parameters": {
+        "operator": "ESRGAN_x2",
+        "hallucination_strength": 0.45,
+        "seed": 42
+      }
+    }
+  ]
+}

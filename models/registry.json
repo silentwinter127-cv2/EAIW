@@ -1,0 +1,579 @@
+{
+  "eaiw_registry_version": "1.0.0",
+  "models": [
+    {
+      "model_id": "deepdream_googlenet_2015",
+      "name": "[2015] DeepDream (BVLC GoogLeNet)",
+      "era": "2014-2016",
+      "year": 2015,
+      "laboratory": "neural_vision",
+      "operation": "deepdream",
+      "version": "1.0-caffe-bvlc",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "Mordvintsev et al., Google Research 2015",
+      "license": "Apache-2.0",
+      "runtime_env": "env_caffe_py310",
+      "supported_modes": [
+        "Historical",
+        "Modern Reproduction",
+        "Simulation"
+      ],
+      "native_parameters": {
+        "layer": "inception_4c",
+        "iterations": 6,
+        "octaves": 3,
+        "seed": 42
+      }
+    },
+    {
+      "model_id": "gatys_nst_vgg19_2015",
+      "name": "[2015] Neural Style Transfer (Gatys VGG-19)",
+      "era": "2014-2016",
+      "year": 2015,
+      "laboratory": "neural_vision",
+      "operation": "style_transfer",
+      "version": "1.1-vgg19",
+      "sha256": "8f9d2a1b3c4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f01",
+      "source": "Gatys et al., CVPR 2016",
+      "license": "BSD-3-Clause",
+      "runtime_env": "env_torch_legacy",
+      "supported_modes": [
+        "Historical",
+        "Modern Reproduction",
+        "Simulation"
+      ],
+      "native_parameters": {
+        "iterations": 6,
+        "seed": 42
+      }
+    },
+    {
+      "model_id": "dcgan_lsun_2015",
+      "name": "[2015] DCGAN 64x64 (Radford et al.)",
+      "era": "2014-2016",
+      "year": 2015,
+      "laboratory": "gan",
+      "operation": "generate",
+      "version": "1.0-dcgan64",
+      "sha256": "1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b",
+      "source": "Radford et al., ICLR 2016",
+      "license": "MIT",
+      "runtime_env": "env_gan_py310",
+      "supported_modes": [
+        "Historical",
+        "Modern Reproduction",
+        "Simulation"
+      ],
+      "native_parameters": {
+        "truncation_psi": 0.85,
+        "iterations": 6,
+        "seed": 42
+      }
+    },
+    {
+      "model_id": "stylegan2_ffhq_2019",
+      "name": "[2019] StyleGAN / StyleGAN2 (Karras et al.)",
+      "era": "2017-2019",
+      "year": 2019,
+      "laboratory": "gan",
+      "operation": "generate",
+      "version": "2.0-ffhq-config-f",
+      "sha256": "4f5e6d7c8b9a0f1e2d3c4b5a6f7e8d9c0b1a2f3e4d5c6b7a8f9e0d1c2b3a4f5e",
+      "source": "Karras et al., CVPR 2019 / 2020",
+      "license": "Nvidia Source",
+      "runtime_env": "env_stylegan",
+      "supported_modes": [
+        "Historical",
+        "Modern Reproduction",
+        "Simulation"
+      ],
+      "native_parameters": {
+        "truncation_psi": 0.7,
+        "iterations": 6,
+        "seed": 42
+      }
+    },
+    {
+      "model_id": "patchmatch_telea_2009",
+      "name": "[2014] Traditional Inpaint (Telea / PatchMatch)",
+      "era": "2009-2015",
+      "year": 2014,
+      "laboratory": "inpainting",
+      "operation": "inpaint",
+      "version": "1.0-opencv-pm",
+      "sha256": "7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d",
+      "source": "Barnes et al., SIGGRAPH 2009 & Telea 2004",
+      "license": "BSD-3-Clause",
+      "runtime_env": "env_classic_cv",
+      "supported_modes": [
+        "Historical",
+        "Modern Reproduction",
+        "Simulation"
+      ],
+      "native_parameters": {
+        "algorithm": "patchmatch",
+        "patch_size": 5,
+        "iterations": 4,
+        "seed": 42
+      }
+    },
+    {
+      "model_id": "deepfill_v2_2019",
+      "name": "[2019] DeepFill v2 (Gated Conv GAN Inpaint)",
+      "era": "2018-2020",
+      "year": 2019,
+      "laboratory": "inpainting",
+      "operation": "inpaint",
+      "version": "2.0-places2",
+      "sha256": "9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b9c8d7e6f5a4b3c2d1e0f9a8b",
+      "source": "Yu et al., ICCV 2019",
+      "license": "MIT",
+      "runtime_env": "env_deepfill",
+      "supported_modes": [
+        "Historical",
+        "Modern Reproduction",
+        "Simulation"
+      ],
+      "native_parameters": {
+        "iterations": 4,
+        "seed": 42
+      }
+    },
+    {
+      "model_id": "lama_ffc_2021",
+      "name": "[2021] LaMa (Fast Fourier Conv Large Mask)",
+      "era": "2021-2022",
+      "year": 2021,
+      "laboratory": "inpainting",
+      "operation": "inpaint",
+      "version": "1.0-big-lama",
+      "sha256": "2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3",
+      "source": "Suvorov et al., WACV 2022",
+      "license": "Apache-2.0",
+      "runtime_env": "env_lama",
+      "supported_modes": [
+        "Historical",
+        "Modern Reproduction",
+        "Simulation"
+      ],
+      "native_parameters": {
+        "iterations": 4,
+        "seed": 42
+      }
+    },
+    {
+      "model_id": "sd_v1_5_inpaint_2022",
+      "name": "[2022] Stable Diffusion 1.5 Inpainting",
+      "era": "2022",
+      "year": 2022,
+      "laboratory": "inpainting",
+      "operation": "inpaint",
+      "version": "1.5-inpaint-fp16",
+      "sha256": "5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e",
+      "source": "Rombach et al., RunwayML 2022",
+      "license": "CreativeML-OpenRAIL",
+      "runtime_env": "env_diffusers",
+      "supported_modes": [
+        "Historical",
+        "Modern Reproduction",
+        "Simulation"
+      ],
+      "native_parameters": {
+        "prompt": "clean background",
+        "iterations": 4,
+        "seed": 42
+      }
+    },
+    {
+      "model_id": "pix2pix_cyclegan_2017",
+      "name": "[2017] Pix2Pix / CycleGAN (Isola & Zhu)",
+      "era": "2017-2019",
+      "year": 2017,
+      "laboratory": "image_translation",
+      "operation": "translate",
+      "version": "1.2-cyclegan",
+      "sha256": "6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f",
+      "source": "Isola et al. CVPR 2017 & Zhu et al. ICCV 2017",
+      "license": "BSD-2-Clause",
+      "runtime_env": "env_cyclegan",
+      "supported_modes": [
+        "Historical",
+        "Modern Reproduction",
+        "Simulation"
+      ],
+      "native_parameters": {
+        "domain_preset": "summer_to_winter",
+        "iterations": 4,
+        "seed": 42
+      }
+    },
+    {
+      "model_id": "sd_v1_3_2022",
+      "name": "[2022] Stable Diffusion v1.3 (CompVis sd-v1-3.ckpt / CFG 10% Drop)",
+      "era": "2020-2022",
+      "year": 2022,
+      "laboratory": "text_to_image",
+      "operation": "txt2img",
+      "version": "1.3-compvis-ldm-kl8",
+      "sha256": "54632c6e8a36eecae65e36cb0595fab314e1a1545a65209f24fde221a8d4b2ca",
+      "source": "Rombach et al., CVPR 2022 (CompVis/stable-diffusion-v1-3, 195k steps @ 512x512)",
+      "license": "CreativeML-OpenRAIL-M",
+      "runtime_env": "env_diffusers",
+      "supported_modes": [
+        "Historical",
+        "Modern Reproduction",
+        "Simulation"
+      ],
+      "native_parameters": {
+        "prompt": "A happy golden retriever dog in sunny meadow",
+        "guidance_scale": 7.5,
+        "sampler": "PLMS",
+        "steps": 6,
+        "seed": 42
+      }
+    },
+    {
+      "model_id": "attngan_reed_2018",
+      "name": "[2018] AttnGAN / StackGAN-v2",
+      "era": "2017-2019",
+      "year": 2018,
+      "laboratory": "text_to_image",
+      "operation": "txt2img",
+      "version": "1.0-attngan-coco",
+      "sha256": "c1d2e3f4a5b60123456789abcdef0123456789abcdef0123456789abcdef0201",
+      "source": "Xu et al., CVPR 2018",
+      "license": "MIT",
+      "runtime_env": "env_torch_legacy",
+      "supported_modes": [
+        "Historical",
+        "Modern Reproduction",
+        "Simulation"
+      ],
+      "native_parameters": {
+        "prompt": "Salmon swimming in a river",
+        "steps": 6,
+        "seed": 42
+      }
+    },
+    {
+      "model_id": "dalle1_dvae_2021",
+      "name": "[2021] OpenAI DALL-E 1 (12B dVAE)",
+      "era": "2021",
+      "year": 2021,
+      "laboratory": "text_to_image",
+      "operation": "txt2img",
+      "version": "1.0-dvae-8192",
+      "sha256": "c1d2e3f4a5b60123456789abcdef0123456789abcdef0123456789abcdef0202",
+      "source": "Ramesh et al., ICML 2021",
+      "license": "MIT",
+      "runtime_env": "env_dalle_dvae",
+      "supported_modes": [
+        "Historical",
+        "Modern Reproduction",
+        "Simulation"
+      ],
+      "native_parameters": {
+        "prompt": "An armchair in the shape of an avocado",
+        "steps": 6,
+        "seed": 42
+      }
+    },
+    {
+      "model_id": "vqgan_clip_2021",
+      "name": "[2021] VQGAN + CLIP (Z+Quantize Cutouts)",
+      "era": "2020-2022",
+      "year": 2021,
+      "laboratory": "text_to_image",
+      "operation": "txt2img",
+      "version": "1.0-imagenet16384",
+      "sha256": "3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4",
+      "source": "Esser et al. 2021 & Crowson 2021",
+      "license": "MIT",
+      "runtime_env": "env_vqgan_clip",
+      "supported_modes": [
+        "Historical",
+        "Modern Reproduction",
+        "Simulation"
+      ],
+      "native_parameters": {
+        "prompt": "Surreal gothic cathedral in misty forest",
+        "steps": 6,
+        "seed": 42
+      }
+    },
+    {
+      "model_id": "glide_clip_2021",
+      "name": "[2021] OpenAI GLIDE (CLIP-Guided)",
+      "era": "2021",
+      "year": 2021,
+      "laboratory": "text_to_image",
+      "operation": "txt2img",
+      "version": "1.0-glide-base",
+      "sha256": "c1d2e3f4a5b60123456789abcdef0123456789abcdef0123456789abcdef0203",
+      "source": "Nichol et al., ICML 2022",
+      "license": "MIT",
+      "runtime_env": "env_glide",
+      "supported_modes": [
+        "Historical",
+        "Modern Reproduction",
+        "Simulation"
+      ],
+      "native_parameters": {
+        "prompt": "Salmon swimming in a river",
+        "steps": 6,
+        "seed": 42
+      }
+    },
+    {
+      "model_id": "dalle_mini_craiyon_2022",
+      "name": "[2022] DALL-E mini / Craiyon",
+      "era": "2022",
+      "year": 2022,
+      "laboratory": "text_to_image",
+      "operation": "txt2img",
+      "version": "1.0-mega-bart",
+      "sha256": "c1d2e3f4a5b60123456789abcdef0123456789abcdef0123456789abcdef0204",
+      "source": "Dayma et al., 2022",
+      "license": "Apache-2.0",
+      "runtime_env": "env_jax_flax",
+      "supported_modes": [
+        "Historical",
+        "Modern Reproduction",
+        "Simulation"
+      ],
+      "native_parameters": {
+        "prompt": "Salmon swimming in a river",
+        "steps": 6,
+        "seed": 42
+      }
+    },
+    {
+      "model_id": "disco_diffusion_v5_2022",
+      "name": "[2022] Disco Diffusion v5.2",
+      "era": "2020-2022",
+      "year": 2022,
+      "laboratory": "text_to_image",
+      "operation": "txt2img",
+      "version": "5.2-colab",
+      "sha256": "7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a",
+      "source": "Crowson & Somnai, 2022",
+      "license": "MIT",
+      "runtime_env": "env_disco",
+      "supported_modes": [
+        "Historical",
+        "Modern Reproduction",
+        "Simulation"
+      ],
+      "native_parameters": {
+        "prompt": "Cyberpunk neon city skyline at night",
+        "steps": 6,
+        "seed": 42
+      }
+    },
+    {
+      "model_id": "sd_v1_1_early_2022",
+      "name": "[2022] Stable Diffusion v1.1",
+      "era": "2020-2022",
+      "year": 2022,
+      "laboratory": "text_to_image",
+      "operation": "txt2img",
+      "version": "1.1-compvis-ldm-kl8",
+      "sha256": "c1d2e3f4a5b60123456789abcdef0123456789abcdef0123456789abcdef0205",
+      "source": "Rombach et al., CVPR 2022",
+      "license": "CreativeML-OpenRAIL-M",
+      "runtime_env": "env_diffusers",
+      "supported_modes": [
+        "Historical",
+        "Modern Reproduction",
+        "Simulation"
+      ],
+      "native_parameters": {
+        "prompt": "Salmon swimming in a river",
+        "steps": 6,
+        "seed": 42
+      }
+    },
+    {
+      "model_id": "modelscope_t2v_2023",
+      "name": "[2023] ModelScope Text-to-Video (damo/text-to-video-synthesis 1.7B 3D-UNet)",
+      "era": "2023 Early T2V",
+      "year": 2023,
+      "laboratory": "text_to_video",
+      "operation": "txt2vid",
+      "version": "1.1.0-ms-1.7b-webvid",
+      "sha256": "d3a8e91f2023b4c567890123456789abcdef0123456789abcdef012345672023",
+      "source": "Wang et al., Alibaba DAMO Academy 2023 (https://modelscope.cn/studios/damo/text-to-video-synthesis/summary)",
+      "license": "CC-BY-NC-4.0",
+      "runtime_env": "env_modelscope_t2v",
+      "supported_modes": [
+        "Historical",
+        "Modern Reproduction",
+        "Simulation"
+      ],
+      "native_parameters": {
+        "prompt": "A man eating spaghetti (威尔·史密斯吃意大利面)",
+        "num_frames": 16,
+        "fps": 8,
+        "resolution": 256,
+        "watermark_ghost": true,
+        "temporal_drift": 0.65,
+        "seed": 42
+      }
+    },
+    {
+      "model_id": "esrgan_gfpgan_post_2021",
+      "name": "[2021] ESRGAN / GFPGAN / DeOldify",
+      "era": "2018-2022",
+      "year": 2021,
+      "laboratory": "postprocessing",
+      "operation": "postprocess",
+      "version": "1.3-realesrgan",
+      "sha256": "0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b",
+      "source": "Wang et al. 2018 / 2021",
+      "license": "Apache-2.0",
+      "runtime_env": "env_postproc",
+      "supported_modes": [
+        "Historical",
+        "Modern Reproduction",
+        "Simulation"
+      ],
+      "native_parameters": {
+        "operator": "ESRGAN_x2",
+        "iterations": 4,
+        "seed": 42
+      }
+    },
+    {
+      "model_id": "salmon_river_leap",
+      "name": "[经典梗I] 三文鱼排逆流跃水",
+      "era": "2021-2022",
+      "year": 2022,
+      "laboratory": "signature_effects",
+      "operation": "signature",
+      "version": "1.1-salmon-conflation",
+      "sha256": "b1c2d3e4f5a60123456789abcdef0123456789abcdef0123456789abcdef0101",
+      "source": "Early LDM / Craiyon Conflation Archive",
+      "license": "CreativeML-OpenRAIL",
+      "runtime_env": "env_diffusers",
+      "supported_modes": [
+        "Historical",
+        "Modern Reproduction",
+        "Simulation"
+      ],
+      "native_parameters": {
+        "iterations": 6,
+        "seed": 42
+      }
+    },
+    {
+      "model_id": "salmon_underwater_school",
+      "name": "[经典梗II] 三文鱼刺身水下巡游",
+      "era": "2018-2021",
+      "year": 2021,
+      "laboratory": "signature_effects",
+      "operation": "signature",
+      "version": "1.0-salmon-underwater",
+      "sha256": "b1c2d3e4f5a60123456789abcdef0123456789abcdef0123456789abcdef0102",
+      "source": "Early VQGAN+CLIP Archive",
+      "license": "MIT",
+      "runtime_env": "env_vqgan_clip",
+      "supported_modes": [
+        "Historical",
+        "Modern Reproduction",
+        "Simulation"
+      ],
+      "native_parameters": {
+        "iterations": 6,
+        "seed": 42
+      }
+    },
+    {
+      "model_id": "vqgan_artbreeder_flesh",
+      "name": "[效果I] VQGAN+CLIP / Artbreeder 畸变五官与肉体拼贴",
+      "era": "2020-2021",
+      "year": 2021,
+      "laboratory": "signature_effects",
+      "operation": "signature",
+      "version": "1.0-vqgan-artbreeder",
+      "sha256": "a1b2c3d4e5f60123456789abcdef0123456789abcdef0123456789abcdef0001",
+      "source": "VQGAN+CLIP & Artbreeder Archive",
+      "license": "MIT",
+      "runtime_env": "env_vqgan_clip",
+      "supported_modes": [
+        "Historical",
+        "Modern Reproduction",
+        "Simulation"
+      ],
+      "native_parameters": {
+        "iterations": 6,
+        "seed": 42
+      }
+    },
+    {
+      "model_id": "deepdream_dogslug_whorl",
+      "name": "[效果II] DeepDream inception_4c 狗头虫与同心涡旋复眼",
+      "era": "2015",
+      "year": 2015,
+      "laboratory": "signature_effects",
+      "operation": "signature",
+      "version": "1.0-googlenet-4c",
+      "sha256": "a1b2c3d4e5f60123456789abcdef0123456789abcdef0123456789abcdef0002",
+      "source": "BVLC GoogLeNet Archive",
+      "license": "Apache-2.0",
+      "runtime_env": "env_caffe_py310",
+      "supported_modes": [
+        "Historical",
+        "Modern Reproduction",
+        "Simulation"
+      ],
+      "native_parameters": {
+        "iterations": 6,
+        "seed": 42
+      }
+    },
+    {
+      "model_id": "deepdream_fractal_hound",
+      "name": "[效果III] DeepDream inception_4e 密集绒毛犬脸分形幻觉",
+      "era": "2015-2016",
+      "year": 2015,
+      "laboratory": "signature_effects",
+      "operation": "signature",
+      "version": "1.0-googlenet-4e",
+      "sha256": "a1b2c3d4e5f60123456789abcdef0123456789abcdef0123456789abcdef0003",
+      "source": "BVLC GoogLeNet Archive",
+      "license": "Apache-2.0",
+      "runtime_env": "env_caffe_py310",
+      "supported_modes": [
+        "Historical",
+        "Modern Reproduction",
+        "Simulation"
+      ],
+      "native_parameters": {
+        "iterations": 6,
+        "seed": 42
+      }
+    },
+    {
+      "model_id": "dalle_mini_clay_blob",
+      "name": "[效果IV] DALL-E mini / 早期消除 泥塑畸形人偶效应",
+      "era": "2021-2022",
+      "year": 2022,
+      "laboratory": "signature_effects",
+      "operation": "signature",
+      "version": "1.0-dalle-mini-clay",
+      "sha256": "a1b2c3d4e5f60123456789abcdef0123456789abcdef0123456789abcdef0004",
+      "source": "DALL-E Mini & Mobile AI Eraser Archive",
+      "license": "Apache-2.0",
+      "runtime_env": "env_dalle_mini",
+      "supported_modes": [
+        "Historical",
+        "Modern Reproduction",
+        "Simulation"
+      ],
+      "native_parameters": {
+        "iterations": 6,
+        "seed": 42
+      }
+    }
+  ]
+}

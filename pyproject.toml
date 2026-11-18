@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eaiw"
+version = "1.0.0"
+description = "Early AI Visual Workstation (2014-2022 Historical AI Visual Reproduction, Inpainting & Artifact Lab)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = [
+    "numpy>=1.24.0",
+    "opencv-python>=4.8.0",
+    "Pillow>=10.0.0",
+]
+
+[project.optional-dependencies]
+gui = ["PySide6>=6.5.0"]
+dl = ["torch>=2.0.0", "torchvision>=0.15.0", "diffusers>=0.21.0", "transformers>=4.33.0"]
+
+[project.scripts]
+eaiw = "main:main"

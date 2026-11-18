@@ -1,0 +1,20 @@
+{
+  "workflow_id": "workflow_a_deepdream_2015",
+  "name": "核心工作流 A：2015 年神经网络视觉实验 (DeepDream & NST)",
+  "initial_input": "/tmp/EAIW_Build/datasets/testing/sample_street_scene.png",
+  "nodes": [
+    {
+      "node_id": "deepdream_inception_4c",
+      "model_id": "deepdream_googlenet_2015",
+      "execution_mode": "Historical",
+      "operation": "deepdream",
+      "parameters": {
+        "layer": "inception_4c/output",
+        "iterations": 6,
+        "learning_rate": 1.6,
+        "octaves": 3,
+        "seed": 42
+      }
+    }
+  ]
+}
