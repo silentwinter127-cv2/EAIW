@@ -63,3 +63,6 @@ id_rsa*
 /*.jpg
 /*.jpeg
 /*.webp
+
+# local duplicate copies (do not publish)
+* (2).*
